@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Event</title>
+</head>
+<body>
+    <img id="my-image" width="10%" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg" alt="ball">
+    <span><img src="https://banner2.cleanpng.com/20181110/efr/kisspng-clip-art-openclipart-goal-vector-graphics-illustra-goal-football-net-soccer-free-image-5be770e517c251.7235927515418943730973.jpg" width="20%" alt="" style="float:right"></span>
+    <p>Click button below to move the image to right</p>
+    <button id="button">Click Me</button>
+
+    <script>
+        let myImg = document.getElementById('my-image')
+        let button = document.getElementById('button')
+
+        function init() {
+            myImg.style.position = 'relative';
+            myImg.style.left = '0px'
+        }
+
+        function moveRight() {
+            myImg.style.left = parseInt(myImg.style.left) + 10 + 'px'
+        }
+
+        button.onclick = moveRight;
+        window.onload = init;
+    </script>
+</body>
+</html>
